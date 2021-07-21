@@ -1,7 +1,17 @@
 # Housing Comparison Tool - 2021 Computing Coursework
 
+## Screenshots
+
+![House List](./images/list.png)
+Screenshot of the comparison of different house options.
+
+![House List](./images/settings_panel.png)
+Screenshot of the config panel allowing the user to add a new house.
+
 ## Brief
-The objective was to make a webapp in plain javascript, CSS and HTML. I decided to create a tool to compare housing options. After entering the address of a property as well as additional information such as the price, number of bedrooms and bathrooms, the Google Maps API is used to calculate the actual address, travel times and distance from a specific location (such as where the user works), making it easier to sort through housing options.
+The objective was to make a webapp in plain HTML, CSS and JavaScript. 
+
+I decided to create a tool to compare housing options. After entering the address of a property as well as additional information such as the price, number of bedrooms and bathrooms, the Google Maps API is used to calculate the actual address, travel times and distance from a specific location (such as where the user works), making it easier to sort through housing options.
 
 Users can also easily sort through the properties by price, bedroom and bathroom number, distance and travel times.
 
@@ -10,7 +20,7 @@ The code was separated in two parts with the frontend and the backend.
 
 The backend was split into 3 modules. One module was responsible for storing the list of homes and for interacting with the houses. For instance it contained the functions to add, edit or remove houses. The second module contained the functions to connect to the Google API through http POST requests embedded in Promises. Both of these modules were entirely written in functional programming style making use of purity. The last module was the handler for the server, allowing the interaction between the client and the backend.
 
-Meanwhile the frontend javascript files interacted between the server and the UI, listing the houses, and setting up the interaction for the buttons.
+Meanwhile the frontend JavaScript files interacted between the server and the UI, listing the houses, and setting up the interaction for the buttons.
 
 ## UX/UI
 The UI was designed to be as simple as possible. The editor panel allows users to easily add houses and also change the general settings such as the work address to calculate metrics from. A popup was used for the editor to hide it when not needed. The same popup was used to both edit and add houses to simplify the user experience.
