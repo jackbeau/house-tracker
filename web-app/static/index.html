@@ -1,0 +1,115 @@
+<!-- Setup and Imports -->
+<!doctype html>
+<html lang="en-gb">
+<meta charset="utf-8">
+<title>Housing Planner</title>
+<link rel="stylesheet" href="default.css">
+<link rel="stylesheet" href="https://use.typekit.net/pzt0tol.css">
+<script type="module" src="main.js"></script>
+
+<!-- Main page -->
+<body>
+    <header>
+        <h1 class="title">Housing Assistant</h1>
+    </header>
+
+    <!-- Top options bar -->
+    <div class="options_bar">
+        <div class="options_bar-center">
+            <button id="refresh" class="top_button">Refresh</button>
+            <button id="editor" class="top_button">Open Editor</button>
+
+            <select class="sort-by" name="sort-by" id="sort-by">
+              <option value="Price" selected>Price</option>
+              <option value="Bedrooms">Bedrooms</option>
+              <option value="Bathrooms">Bathrooms</option>
+              <option value="Distance">Distance</option>
+              <option value="Tube_time">Tube time</option>
+              <option value="Bike_time">Bike time</option>
+            </select> 
+
+            <label class="sort-by-label" for="sort-by">Sort by:</label>
+
+            <h2 class="houses_title black">My houses</h2>
+        </div>
+    </div>
+
+    <main>
+
+        <!-- Template house card -->
+        <template id="my-house">
+            <div class="house">
+                <ul>
+                    <h3 class="black"><span class="address" name="ID"> 1 Victoria Road, W36 FA </span></h3>
+                    <li> Price: £<span name="price"> /week </span></li>
+                    <li> Price per person: £<span name="price_pp">week </span></li>
+                    <li> Bedrooms: <span name="bedrooms"> </span></li>
+                    <li> Bathrooms: <span name="bathrooms"> </span></li>
+                    <li> Distance: <span name="distance"> </span></li>
+                    <li> Tube time: <span name="tube_time"> </span></li>
+                    <li> Bike time: <span name="bike_time"> </span></li>
+                </ul>
+                <button id="edit-button" class="button yellow_button edit-button" title="Edit">
+                    <div name="house_id">Edit</div>
+                </button>
+            </div>
+        </template>
+
+        <!-- Section for house cards -->
+        <section class="house-pane" id="houses">
+        </section>
+</body>
+</main>
+
+
+<!-- Edit/Add house modal -->
+<div id="myModal" class="modal">
+    <div class="modal-content">
+
+        <!-- Modal header -->
+        <div class="modal-header">
+            <span class="close">&times;</span>
+            <h2 class="edit_title black">Global Settings</h2>
+        </div>
+
+         <!-- Modal body -->
+         <div class="modal-body">
+            <section class="edit-pane">
+                <div id="edit-global-card" class="edit_card">
+                    <p> Enter the address to calculate metrics from:</p>
+                    <ul>
+                        <li>Work address: <input placeholder="Imperial College London" id="work_address"></input> <button id="update-work-address" class="blue_button button" title="Edit">Get Address</button> <span name="formatted_work_address"></span></li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+
+        <!-- Modal header -->
+        <div class="modal-header">
+            <span class="close">&times;</span>
+            <h2 class="edit_title black">House Settings</h2>
+        </div>
+
+         <!-- Modal body -->
+        <div class="modal-body">
+            <section class="edit-pane">
+                <div id="edit-card" class="edit_card">
+                    <p> Please enter the information for the property you wish to add in the fields below:</p>
+                    <ul>
+                        <li>Address: <input placeholder="House address" id="address"></input> <button id="update-address" class="blue_button button" title="Edit">Get Address</button> <span name="formatted_address"> </span></li>
+                        <li>Price: <input placeholder="Total price per week" id="price"></input></li>
+                        <li> Bedrooms: <input placeholder="Number of bedrooms" id="bedrooms"></input></li>
+                        <li>Bathrooms: <input placeholder="Number of bathrooms" id="bathrooms"></input></li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+
+         <!-- Modal Footer -->
+        <div class="modal-footer">
+            <button id="save-button" class="blue_button button" title="Edit">Save</button>
+            <button id="delete-button" class="red_button button" title="Edit">Delete</button>
+        </div>
+    </div>
+
+</div>
