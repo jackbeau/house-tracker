@@ -12,7 +12,7 @@ import https from "https";
 
 const google_api = Object.create(null);
 
-const api_key = "AIzaSyBfi_RM33u-C5QYed0aTuq5WNxd-obFMxk";
+const api_key = "";
 
 // ________________
 // Requests handler

@@ -1,7 +1,7 @@
 # Housing Comparison Tool - 2021 Computing Coursework
 
 ## Brief
-The objective was to make a tool to compare housing options. After entering the address of a property as well as additional information such as the price, number of bedrooms and bathrooms, the Google Maps API is used to calculate the actual address, travel times and distance from a specific location (such as where the user works), making it easier to sort through housing options.
+The objective was to make a webapp in plain javascript, CSS and HTML. I decided to create a tool to compare housing options. After entering the address of a property as well as additional information such as the price, number of bedrooms and bathrooms, the Google Maps API is used to calculate the actual address, travel times and distance from a specific location (such as where the user works), making it easier to sort through housing options.
 
 Users can also easily sort through the properties by price, bedroom and bathroom number, distance and travel times.
 
